@@ -9,13 +9,13 @@
 # read -p "Enter common name 'crdroid' (CN): " common_name
 # read -p "Enter email address 'android@android.com' (emailAddress): " email
 
-country = "DE"
-state = "Bavaria"
-locality = "Munich"
-organization = "LOLOLOLO"
-organizational_unit = "LOLOLOLOLO"
-common_name = "LOLOLOLOLO"
-email = "lololololololololo@lolololo.com"
+country="DE"
+state="Bavaria"
+locality="Munich"
+organization="Mi439"
+organizational_unit="Mi439"
+common_name="Mi439"
+email="Mi439@Mi439.com"
 
 # Construct the subject line
 subject="/C=${country}/ST=${state}/L=${locality}/O=${organization}/OU=${organizational_unit}/CN=${common_name}/emailAddress=${email}"
@@ -43,8 +43,8 @@ mkdir ~/.android-certs
 
 # Passwordless certificates
 
-for cert in bluetooth cyngn-app media networkstack nfc platform releasekey sdk_sandbox shared testcert testkey verity verifiedboot; do \
-    ./development/tools/make_key ~/.android-certs/$x "$subject" > /dev/null 2>&1 && printf "\n\n" \
+for x in bluetooth cyngn-app media networkstack nfc platform releasekey sdk_sandbox shared testcert testkey verity verifiedboot; do \
+    printf "\n\n" | ./development/tools/make_key ~/.android-certs/$x "$subject"; \
 done
 
 #for x in bluetooth media networkstack nfc platform releasekey sdk_sandbox shared testkey verifiedboot; do \
