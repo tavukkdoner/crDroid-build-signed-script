@@ -1,5 +1,6 @@
 # crDroid-build-signed-script
 Script for creating a signing build environment
+> Change subject parameters with yours. Don't use blindly without reading and understanding!
 
 ## Disclaimer
 This script only works for password-less keys (DO NOT SET A PASSWORD) *This is due to building inline, other steps are necessary for a password*
